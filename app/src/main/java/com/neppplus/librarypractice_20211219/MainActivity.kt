@@ -6,6 +6,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.bumptech.glide.Glide
 import com.gun0912.tedpermission.PermissionListener
 import com.gun0912.tedpermission.normal.TedPermission
 import kotlinx.android.synthetic.main.activity_main.*
@@ -48,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
                 override fun onPermissionDenied(deniedPermissions: MutableList<String>?) {
 
-//                    최종 권한 거부 되었을 때.
+//                    최종 권한 거절 되었을 때.
                     Toast.makeText(this@MainActivity, "권한이 거부되어 전화 연결이 불가능합니다.", Toast.LENGTH_SHORT)
                         .show()
 
@@ -68,6 +69,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun setValues(){
+
+        Glide.with(this).load("https://cdn.topstarnews.net/news/photo/201912/714847_426867_3336.jpeg").into(imgAction)
+
 
     }
 }
