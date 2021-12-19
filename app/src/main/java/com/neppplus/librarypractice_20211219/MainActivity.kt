@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
 
     fun setupEvents(){
-//        이미지뷰/ 텍슽뷰 / LinearLayout 등은 버튼처럼 setOnClickListener 가능.
+//        이미지뷰/ 텍스트뷰 / LinearLayout 등은 버튼처럼 setOnClickListener 가능.
         imgProfile.setOnClickListener {
 
             val myIntent = Intent(this, ViewPhotoActivity::class.java)
