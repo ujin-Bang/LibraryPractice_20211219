@@ -1,6 +1,7 @@
 package com.neppplus.librarypractice_20211219
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -35,6 +36,11 @@ class MainActivity : AppCompatActivity() {
                 override fun onPermissionGranted() {
 
 //                    권한이 최종 획득 OK 일 때 실행할 코드.
+
+//                    CALL 액션을 권한 OK일 때만 활용
+                    val myUri = Uri.parse("tel:010-5555-9999")
+                    val myIntent = Intent( Intent.ACTION_CALL,myUri )
+                    startActivity(myIntent)
 
                 }
 
